@@ -44,3 +44,9 @@ class BankAccount:
     def add_interest(self):
         self.balance = self.balance + (self.balance * 0.00083)
         return self.balance
+    
+    """
+    
+    """
+    def print_statement(self):
+        print(f"{self.full_name}\nAccount No.: {self.account_number}\nBalance: ${self.balance:.2f}")
