@@ -46,7 +46,7 @@ class BankAccount:
         return self.balance
     
     """
-    
+    Shows users name, account number and balance. 
     """
     def print_statement(self):
         print(f"{self.full_name}\nAccount No.: {self.account_number}\nBalance: ${self.balance:.2f}")
