@@ -37,3 +37,10 @@ class BankAccount:
         balance = self.balance
         print(f"Thank you for being our bank user. Your current account balance is ${balance:.2f}")
         return balance
+    
+    """
+    Adding interest to the users balance.
+    """
+    def add_interest(self):
+        self.balance = self.balance + (self.balance * 0.00083)
+        return self.balance
