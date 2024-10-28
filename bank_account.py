@@ -14,7 +14,7 @@ class BankAccount:
     def deposit(self, amount):
         new_balance = self.balance + amount
         self.balance = new_balance
-        print(f"Amount deposited: ${amount} new balance: ${self.balance}")
+        print(f"Amount deposited: ${amount:.2f} new balance: ${self.balance:.2f}")
 
     """
     Checks to see if there's anough money in the balance. 
@@ -28,7 +28,12 @@ class BankAccount:
         else:
             new_balance = self.balance - amount
             self.balance = new_balance 
-            print(f"Amount withdraw: ${amount} new balance ${self.balance}")
+            print(f"Amount withdraw: ${amount:.2f} new balance ${self.balance:.2f}")
 
-
-
+    """
+    Show a account balance with a friendly message. Then shows current balance of the account. 
+    """
+    def get_balance(self):
+        balance = self.balance
+        print(f"Thank you for being our bank user. Your current account balance is ${balance:.2f}")
+        return balance
