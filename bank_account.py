@@ -23,7 +23,7 @@ class BankAccount:
     """
     def withdraw(self, amount):
         if amount > self.balance:
-            self.balance = self.balance - 10
+            self.balance = self.balance - 10 #overdraft fee
             print("Insufficient funds. Overdraft fee charged")
         else:
             new_balance = self.balance - amount
@@ -50,3 +50,42 @@ class BankAccount:
     """
     def print_statement(self):
         print(f"{self.full_name}\nAccount No.: {self.account_number}\nBalance: ${self.balance:.2f}")
+
+
+#different object instances
+lucila_account = BankAccount("Lucila Hernandez", 12345678)
+adi_account = BankAccount("Adi Armendariz", 10101010)
+marceline_account = BankAccount("Marceline Hernandez", 20202020)
+
+#depositing money, then adding interest and showing bank statement.
+adi_account.deposit(30000)
+adi_account.add_interest()
+adi_account.print_statement()
+
+# example code #1
+# created new bank account account intance
+mitchell_account = BankAccount("Mitchell", "03141592")
+#deposited $400,000 into "Mitchell's" account
+mitchell_account.deposit(400000)
+# printed statement
+mitchell_account.print_statement()
+# adds interest
+mitchell_account.add_interest()
+# added interest to the account
+mitchell_account.withdraw(150)
+#printed statement
+mitchell_account.print_statement()
+
+#example code #2
+# created new bank account account intance
+maria_account = BankAccount("Maria", "02587109")
+#deposited $700,000 into "Maria's" account
+maria_account.deposit(700000)
+# printed statement
+maria_account.print_statement()
+# add interest
+maria_account.add_interest()
+# added interest to the account
+maria_account.withdraw(300)
+#printed statement
+maria_account.print_statement()
