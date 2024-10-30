@@ -3,6 +3,7 @@ class BankAccount:
     """Class name BankAccount that holds bank attributes and methods"""
 
     def __init__(self, full_name, account_number, balance=0):
+        """Initialize bank account intance and setting up attributes"""
         self.full_name = full_name
         self.account_number = account_number
         self.balance = balance
