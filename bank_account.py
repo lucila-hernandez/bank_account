@@ -3,7 +3,7 @@ class BankAccount:
     """Class name BankAccount that holds bank attributes and methods"""
 
     def __init__(self, full_name, account_number, balance=0):
-        """Initialize bank account intance and setting up attributes"""
+        """Initialize bank account instance and setting up attributes"""
         self.full_name = full_name
         self.account_number = account_number
         self.balance = balance
@@ -12,7 +12,6 @@ class BankAccount:
         """Helps add money to balance then updates balance. It will return the amount deposited and show the new balance with the new deposit."""
         self.balance += amount 
         print(f"Amount deposited: ${amount:,.2f}, new balance: ${self.balance:,.2f}")
-
 
     def withdraw(self, amount):
         """Checks to see if there's enough money in the balance. If there is not enough money there will be an overdraft fee of 10, this will be subtracted from the balance and an insufficient funds message will show. If there is enough money, it will subtract the amount from the balance and update the new balance. It will show amount withdrawn and new balance."""
@@ -49,7 +48,6 @@ adi_account.deposit(30000)
 adi_account.withdraw(33000)
 adi_account.get_balance()
 
-
 # example code #1
 # created new bank account intance
 mitchell_account = BankAccount("Mitchell", "03141592")
@@ -63,7 +61,6 @@ mitchell_account.add_interest()
 mitchell_account.withdraw(150)
 #printed statement
 mitchell_account.print_statement()
-
 
 #example code #2
 # created new bank account account intance
